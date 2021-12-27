@@ -2,9 +2,9 @@ import Head from "next/head"
 import Header from "../../Header"
 import Footer from "../../Footer"
 
-const MasterLayout = ({title, description, keywords, children}) => {
+const MasterLayout = ({title, description, keywords, children, opacity}) => {
     return (
-        <div className="bg-gray-900">
+        <div>
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description}/>
@@ -14,11 +14,11 @@ const MasterLayout = ({title, description, keywords, children}) => {
 
             <div className="relative overflow-hidden">
 
-                <Header/>
+                <Header opacity={opacity}/>
 
-                <main>
+
                 {children}
-                </main>
+
 
                 <Footer/>
 
@@ -34,4 +34,5 @@ MasterLayout.defaultProps = {
     title: 'DJ Events | Find the hottest parties',
     description: 'Find the latest DJ and other musical events',
     keywords: 'dj, musical, hottest parties',
+    opacity: 70
 }

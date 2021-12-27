@@ -13,12 +13,12 @@ const navigation = [
     {name: 'Contact Us', href: '/contact'},
 ]
 
-const Header = () => {
+const Header = ({opacity}) => {
 
     return (
         <Popover as="header">
 
-            <div className="bg-gray-900 pt-6 pb-6 z-20 border-b border-gray-700 fixed w-full backdrop-blur bg-opacity-80">
+            <div className={`bg-gray-900 pt-6 pb-6 z-20 border-b border-gray-700 fixed w-full backdrop-blur bg-opacity-${opacity}`}>
                 <nav
                     className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
                     aria-label="Global"
@@ -81,9 +81,9 @@ const Header = () => {
                     <div className="rounded-lg shadow-md bg-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="px-5 pt-4 flex items-center justify-between">
                             <div>
-                                <img
+                                <Image
                                     className="h-8 w-auto"
-                                    src="https://preview.cruip.com/neon/images/logo.svg"
+                                    src={logo}
                                     alt=""
                                 />
                             </div>

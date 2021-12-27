@@ -6,9 +6,12 @@ import CTA from "../components/CTA"
 const HomePage = () => {
     return (
         <MasterLayout>
-            <Hero/>
-            <EventList/>
-            <CTA/>
+            <main className="bg-gray-900">
+                <Hero/>
+                <EventList/>
+                <CTA/>
+            </main>
+
         </MasterLayout>
     )
 }
